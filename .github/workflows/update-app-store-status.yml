@@ -1,0 +1,45 @@
+name: App Store publication status
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: app-store-publication-status
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Check Apple public catalog
+        run: node scripts/update-app-store-status.mjs
+
+      - name: Verify generated site
+        run: node scripts/verify-public-deployment.mjs
+
+      - name: Publish changed status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/app-store-status.json
+          if git diff --cached --quiet; then
+            echo "No status change to publish."
+          else
+            git commit -m "Update App Store publication status"
+            git push
+          fi

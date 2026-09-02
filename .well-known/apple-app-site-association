@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["FL88TW28PZ.com.philippgraef.rly"],
+        "components": [
+          { "/": "/apps/rly/claim/*", "comment": "Öffentliche RLY?-Ergebnisse in der iOS-App öffnen." },
+          { "/": "/apps/rly/auth/callback/*", "comment": "Bestätigungs- und Wiederherstellungslinks sicher in RLY? öffnen." }
+        ]
+      }
+    ]
+  }
+}

@@ -13,6 +13,7 @@ if (publicCatalog.schemaVersion !== 1 || !Array.isArray(publicCatalog.apps)) {
   throw new Error("data/public-apps.json has an unsupported format");
 }
 const publicApps = publicCatalog.apps.map((app) => ({ ...app, bundle: app.bundleId }));
+const allowedBundleIDs = new Set(["com.philippgraef.rly"]);
 const checkedAt = new Date().toISOString();
 
 const lookup = async (bundleId, storefront) => {
@@ -34,7 +35,7 @@ const lookup = async (bundleId, storefront) => {
 
 const checkApp = async (app) => {
   const previousEntry = previous.apps?.[app.slug];
-  if (!app.bundle.startsWith("com.pg-apps.")) {
+  if (!allowedBundleIDs.has(app.bundle)) {
     return {
       bundleId: app.bundle,
       status: "unpublished",

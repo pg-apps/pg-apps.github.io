@@ -307,5 +307,10 @@ body.rly-page { --ink: #15191d; --muted: #596168; --paper: #f3f5ef; --surface: #
 .rly-card { background: linear-gradient(145deg, rgba(201,255,56,.13), rgba(255,255,255,.9)); }
 .rly-button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 18px; border-radius:14px; background:#15191d; color:#fff; font-weight:800; text-decoration:none; }
 .rly-button.secondary { color:#15191d; background:#c9ff38; }
+body.orydo-page { --ink: #10254a; --muted: #53627a; --paper: #f3f8ff; --surface: #ffffff; --accent: #155eef; --accent-2: #12c6b2; }
+.orydo-page .brand-mark { background: linear-gradient(135deg, #155eef, #12c6b2); color: #fff; }
+.orydo-card { background: linear-gradient(145deg, rgba(21,94,239,.10), rgba(18,198,178,.08), rgba(255,255,255,.94)); }
+.orydo-button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:12px 18px; border-radius:14px; background:#10254a; color:#fff; font-weight:800; text-decoration:none; }
+.orydo-button.secondary { background:#d8f8f2; color:#10254a; }
 .button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
 .claim-code { display:block; margin:18px 0; padding:16px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.75); overflow-wrap:anywhere; }

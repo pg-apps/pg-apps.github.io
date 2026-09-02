@@ -3,6 +3,13 @@
   "generatedAt": "2026-09-03T17:59:00.000Z",
   "apps": [
     {
+      "slug": "orydo",
+      "name": "ORYDO",
+      "bundleId": "com.pgapps.orydo",
+      "icon": "orydo-app-icon.png",
+      "copyright": "2026 Philipp Graef"
+    },
+    {
       "slug": "rly",
       "name": "RLY?",
       "bundleId": "com.philippgraef.rly",

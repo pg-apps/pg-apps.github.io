@@ -7,6 +7,12 @@
     "us"
   ],
   "apps": {
+    "orydo": {
+      "bundleId": "com.pgapps.orydo",
+      "status": "unpublished",
+      "checkedAt": "2026-09-03T00:00:00.000Z",
+      "reason": "not_found_in_public_storefronts"
+    },
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",

@@ -53,6 +53,9 @@ if (!noticePage.includes("Meldung per E-Mail")) throw new Error("RLY notice fall
 for (const slug of Object.keys(statuses.apps)) if (!slugs.has(slug)) throw new Error(`Status file exposes a non-public app: ${slug}`);
 
 const home = await readFile(path.join(root, "index.html"), "utf8");
-for (const app of catalog.apps) if (!home.includes(`href="apps/${app.slug}/"`)) throw new Error(`Homepage link missing for ${app.slug}`);
+for (const app of catalog.apps) {
+  if (!home.includes(`href="apps/${app.slug}/"`)) throw new Error(`Homepage link missing for ${app.slug}`);
+  if (!home.includes(`src="assets/${app.icon}"`)) throw new Error(`Homepage icon path does not match the catalog for ${app.slug}`);
+}
 
 console.log(`Verified sanitized public deployment with ${catalog.apps.length} public apps.`);

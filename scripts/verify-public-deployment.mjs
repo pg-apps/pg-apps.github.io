@@ -33,7 +33,19 @@ try {
 } catch (error) {
   if (error?.code !== "ENOENT") throw error;
 }
-for (const slug of emittedSlugs) if (!slugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+// Owner-authorized legal/support-only page; not an approved public app profile.
+const legalOnlySlugs = new Set(["funkle"]);
+for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+for (const slug of legalOnlySlugs) {
+  const page = await readFile(path.join(root, "apps", slug, "index.html"), "utf8");
+  for (const anchor of ["support", "datenschutz", "support-en", "privacy"]) {
+    if (!page.includes(`id="${anchor}"`)) throw new Error(`Legal anchor missing: ${slug}/${anchor}`);
+  }
+  if (/<(?:img|video|script|iframe)\b/i.test(page) || /data-app-page|data-store-status|apps\.apple\.com/i.test(page)) {
+    throw new Error(`Legal-only page contains presentation or active content: ${slug}`);
+  }
+  if (catalog.apps.some((app) => app.slug === slug)) throw new Error(`Legal-only page exposed as app profile: ${slug}`);
+}
 
 for (const app of catalog.apps) {
   const entry = statuses.apps[app.slug];

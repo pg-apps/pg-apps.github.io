@@ -15,6 +15,17 @@
       "bundleId": "de.philippgraef.foxievoyage",
       "icon": "app-icons/storyvoyage.png",
       "copyright": "2026 Philipp Graef"
+    },
+    {
+      "slug": "rynolo",
+      "name": "RYNOLO",
+      "bundleId": "com.philippgraef.rynolo",
+      "icon": "app-icons/rynolo.png",
+      "tagline": "Private travel memories, verified visits and goals that stay honest.",
+      "platform": "iPhone · iOS 18+",
+      "submissionStatus": "prepared",
+      "accent": "#087f86",
+      "accent2": "#8ce3cd"
     }
   ]
 }

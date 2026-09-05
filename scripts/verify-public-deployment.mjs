@@ -9,7 +9,7 @@ if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.apps)) throw new Error
 if (statuses.schemaVersion !== 1 || typeof statuses.apps !== "object" || statuses.apps === null) throw new Error("Invalid App Store status file");
 
 const slugs = new Set();
-const allowedBundleIDs = new Set(["com.philippgraef.rly", "de.philippgraef.foxievoyage"]);
+const allowedBundleIDs = new Set(["com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo"]);
 for (const app of catalog.apps) {
   if (!app?.slug || !app?.name || !app?.bundleId || !app?.icon || slugs.has(app.slug)) throw new Error("Invalid or duplicate public app entry");
   if (!allowedBundleIDs.has(app.bundleId)) throw new Error(`Non-canonical public bundle ID for ${app.slug}`);

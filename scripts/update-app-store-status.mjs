@@ -13,7 +13,7 @@ if (publicCatalog.schemaVersion !== 1 || !Array.isArray(publicCatalog.apps)) {
   throw new Error("data/public-apps.json has an unsupported format");
 }
 const publicApps = publicCatalog.apps.map((app) => ({ ...app, bundle: app.bundleId }));
-const allowedBundleIDs = new Set(["com.philippgraef.rly", "de.philippgraef.foxievoyage"]);
+const allowedBundleIDs = new Set(["com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo"]);
 const checkedAt = new Date().toISOString();
 
 const lookup = async (bundleId, storefront) => {

@@ -12,6 +12,12 @@
       "status": "unpublished",
       "checkedAt": "2026-09-05T09:02:27.932Z",
       "reason": "not_found_in_public_storefronts"
+    },
+    "storyvoyage": {
+      "bundleId": "de.philippgraef.foxievoyage",
+      "status": "unpublished",
+      "checkedAt": null,
+      "reason": "not_found_in_public_storefronts"
     }
   }
 }

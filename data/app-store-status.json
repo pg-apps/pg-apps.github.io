@@ -24,6 +24,12 @@
       "status": "unpublished",
       "checkedAt": "2026-09-08T09:38:23.768Z",
       "reason": "not_found_in_public_storefronts"
+    },
+    "thirty": {
+      "bundleId": "io.github.pg-apps.thirty",
+      "status": "unpublished",
+      "checkedAt": null,
+      "reason": "pending_initial_public_catalog_check"
     }
   }
 }

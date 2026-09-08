@@ -26,6 +26,13 @@
       "submissionStatus": "prepared",
       "accent": "#087f86",
       "accent2": "#8ce3cd"
+    },
+    {
+      "slug": "thirty",
+      "name": "THIRTY",
+      "bundleId": "io.github.pg-apps.thirty",
+      "icon": "thirty-app-icon.png",
+      "copyright": "2026 Philipp Graef"
     }
   ]
 }

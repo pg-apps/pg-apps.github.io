@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T09:38:23.768Z",
+  "generatedAt": "2026-09-09T09:42:08.342Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,26 +10,26 @@
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",
-      "checkedAt": "2026-09-08T09:38:23.768Z",
+      "checkedAt": "2026-09-09T09:42:08.342Z",
       "reason": "not_found_in_public_storefronts"
     },
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "unpublished",
-      "checkedAt": "2026-09-08T09:38:23.768Z",
+      "checkedAt": "2026-09-09T09:42:08.342Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "unpublished",
-      "checkedAt": "2026-09-08T09:38:23.768Z",
+      "checkedAt": "2026-09-09T09:42:08.342Z",
       "reason": "not_found_in_public_storefronts"
     },
     "thirty": {
       "bundleId": "io.github.pg-apps.thirty",
       "status": "unpublished",
-      "checkedAt": null,
-      "reason": "pending_initial_public_catalog_check"
+      "checkedAt": "2026-09-09T09:42:08.342Z",
+      "reason": "not_found_in_public_storefronts"
     }
   }
 }

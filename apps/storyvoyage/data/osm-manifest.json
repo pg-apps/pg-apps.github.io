@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "status": "research-candidate",
+  "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "files": [
+    {
+      "file": "mazouna_osm_reference.geojson",
+      "sha256": "072684ba27489f9c88d10ff4237775cf5d38be703b5b143f73603a3701f5085d",
+      "sourceURL": "https://api.openstreetmap.org/api/0.6/relation/6559405/full.json"
+    },
+    {
+      "file": "tlemcen_osm_reference.geojson",
+      "sha256": "2cc1913241a445ff4d919544d67e31fa53ccd48d9c09de092503b18270a13bb4",
+      "sourceURL": "https://api.openstreetmap.org/api/0.6/relation/4291172/full.json"
+    },
+    {
+      "file": "sao_nicolau_island_reference_20260913.geojson",
+      "sha256": "2e2251c0d1a925871fede2ee456b9e5a3723c0597f4717179f6ce8e473d4f402",
+      "sourceURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CPV/ADM1/geoBoundaries-CPV-ADM1.geojson"
+    }
+  ]
+}

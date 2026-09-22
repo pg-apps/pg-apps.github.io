@@ -3,10 +3,10 @@
   "generatedAt": "2026-09-03T17:59:00.000Z",
   "apps": [
     {
-      "slug": "orydo",
-      "name": "ORYDO",
+      "slug": "nadumo",
+      "name": "nadumo",
       "bundleId": "com.pgapps.orydo",
-      "icon": "orydo-app-icon.png",
+      "icon": "nadumo-app-icon.png",
       "copyright": "2026 Philipp Graef"
     },
     {

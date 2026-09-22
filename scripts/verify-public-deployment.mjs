@@ -35,7 +35,10 @@ try {
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
 const legalOnlySlugs = new Set(["funkle"]);
-for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+const legacyRedirectSlugs = new Set(["orydo"]);
+for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+const legacyRedirect = await readFile(path.join(root, "apps/orydo/index.html"), "utf8");
+if (!legacyRedirect.includes("../nadumo/") || !legacyRedirect.includes("location.hash")) throw new Error("nadumo legacy redirect must preserve legal anchors");
 for (const slug of legalOnlySlugs) {
   const page = await readFile(path.join(root, "apps", slug, "index.html"), "utf8");
   for (const anchor of ["support", "datenschutz", "support-en", "privacy"]) {

@@ -42,6 +42,11 @@
       "status": "unpublished",
       "checkedAt": "2026-09-21T10:40:14.214Z",
       "reason": "not_found_in_public_storefronts"
+    },
+    "pond-sparks": {
+      "bundleId": "com.teichfunken.pond",
+      "status": "unpublished",
+      "reason": "not_yet_submitted"
     }
   }
 }

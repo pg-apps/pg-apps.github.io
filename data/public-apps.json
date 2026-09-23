@@ -47,6 +47,13 @@
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "icon": "app-icons/recht-medizinisch-app-icon-20260909.png",
       "copyright": "2026 Philipp Graef"
+    },
+    {
+      "slug": "pond-sparks",
+      "name": "Pond Sparks",
+      "bundleId": "com.teichfunken.pond",
+      "icon": "app-icons/pond-sparks.png",
+      "copyright": "2026 Philipp Graef"
     }
   ]
 }

@@ -7,6 +7,16 @@
     "us"
   ],
   "apps": {
+    "funkle": {
+      "bundleId": "io.github.pg-apps.funkle",
+      "status": "published",
+      "checkedAt": "2026-09-24T16:27:00Z",
+      "storefront": "de",
+      "trackId": 6807551305,
+      "trackName": "Funkle",
+      "trackViewUrl": "https://apps.apple.com/de/app/funkle/id6807551305",
+      "version": "1.0"
+    },
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "unpublished",

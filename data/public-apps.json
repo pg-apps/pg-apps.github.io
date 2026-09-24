@@ -3,6 +3,13 @@
   "generatedAt": "2026-09-03T17:59:00.000Z",
   "apps": [
     {
+      "slug": "funkle",
+      "name": "Funkle",
+      "bundleId": "io.github.pg-apps.funkle",
+      "icon": "app-icons/funkle.png",
+      "copyright": "2026 Philipp Graef"
+    },
+    {
       "slug": "nadumo",
       "name": "nadumo",
       "bundleId": "com.pgapps.orydo",

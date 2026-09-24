@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T09:57:07.723Z",
+  "generatedAt": "2026-09-24T09:57:45.733Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,42 +10,42 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "unpublished",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "reason": "not_found_in_public_storefronts"
     },
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "unpublished",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
       "trackViewUrl": "https://apps.apple.com/de/app/rynolo/id6807559572?uo=4",
-      "version": "1.0",
-      "releaseDate": "2026-09-22T08:26:06Z"
+      "version": "1.1",
+      "releaseDate": "2026-09-23T18:38:01Z"
     },
     "thirty": {
       "bundleId": "io.github.pg-apps.thirty",
       "status": "unpublished",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "reason": "not_found_in_public_storefronts"
     },
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "unpublished",
-      "checkedAt": "2026-09-23T09:57:07.723Z",
+      "checkedAt": "2026-09-24T09:57:45.733Z",
       "reason": "not_found_in_public_storefronts"
     },
     "pond-sparks": {

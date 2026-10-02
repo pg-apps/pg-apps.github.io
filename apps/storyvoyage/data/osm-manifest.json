@@ -17,6 +17,11 @@
       "file": "sao_nicolau_island_reference_20260913.geojson",
       "sha256": "2e2251c0d1a925871fede2ee456b9e5a3723c0597f4717179f6ce8e473d4f402",
       "sourceURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CPV/ADM1/geoBoundaries-CPV-ADM1.geojson"
+    },
+    {
+      "file": "bonaire_land_reference_20261002.geojson",
+      "sha256": "f5ef1cc3be6cb80581c0f1a6406ccd1368cbf7bc338f270361a87ff9bbcfba31",
+      "sourceURL": "https://www.openstreetmap.org/relation/4266671"
     }
   ]
 }

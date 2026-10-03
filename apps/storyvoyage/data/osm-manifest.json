@@ -22,6 +22,12 @@
       "file": "bonaire_land_reference_20261002.geojson",
       "sha256": "f5ef1cc3be6cb80581c0f1a6406ccd1368cbf7bc338f270361a87ff9bbcfba31",
       "sourceURL": "https://www.openstreetmap.org/relation/4266671"
+    },
+    {
+      "file": "vainakh_institutional_references_20261003.geojson",
+      "sha256": "62684bb24994bd0b029e2b06eca7482daeacd95c8fb239bcf35f1fea191503de",
+      "sourceURL": "https://www.openstreetmap.org/relation/253252",
+      "additionalSourceURL": "https://www.openstreetmap.org/relation/109877"
     }
   ]
 }

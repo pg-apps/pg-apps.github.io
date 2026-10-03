@@ -20,3 +20,17 @@ These files contain geometry and provenance only, no private collection or visit
 - [tlemcen_osm_reference.geojson](tlemcen_osm_reference.geojson) — SHA-256 `2cc1913241a445ff4d919544d67e31fa53ccd48d9c09de092503b18270a13bb4`; source: https://api.openstreetmap.org/api/0.6/relation/4291172/full.json
 - [sao_nicolau_island_reference_20260913.geojson](sao_nicolau_island_reference_20260913.geojson) — SHA-256 `2e2251c0d1a925871fede2ee456b9e5a3723c0597f4717179f6ce8e473d4f402`; source: https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CPV/ADM1/geoBoundaries-CPV-ADM1.geojson
 - [bonaire_land_reference_20261002.geojson](bonaire_land_reference_20261002.geojson) — SHA-256 `f5ef1cc3be6cb80581c0f1a6406ccd1368cbf7bc338f270361a87ff9bbcfba31`; source: https://www.openstreetmap.org/relation/4266671
+
+## Ingushetia / Chechnya institutional references — 2026-10-03
+
+© OpenStreetMap contributors — https://www.openstreetmap.org/copyright
+
+ODbL 1.0: https://opendatacommons.org/licenses/odbl/1-0/
+
+Two complete administrative outlines: relations 253252 (version 93) and 109877 (version 162). Relation timestamps: 2026-09-02; retrieved: 2026-10-03. Join 80 and 128 outer ways by node identity; preserve all 2,509 and 7,488 coordinates. Normalize outer orientation; omit editor identities and child-relation metadata. The 24 shared ways and 1,541 shared nodes independently agree. No holes or components silently removed.
+
+Zwei institutionelle Verwaltungsreferenzen, keine vollständigen/exklusiven Sprachflächen, keine rechtlich vermessenen Grenzen oder automatischen Orts-/Besuchsnachweise. Two institutional administrative references, not exact/exclusive/complete speaker areas or legal-border/GPS/visit certification.
+
+The full machine-readable derivative is freely available under ODbL 1.0 without additional reuse restrictions, fees, account requirement or app/portal-terms restrictions. Contains geometry/provenance only, no user collection/visit/account data. Publication does not itself authorize catalog import.
+
+- [vainakh_institutional_references_20261003.geojson](vainakh_institutional_references_20261003.geojson) — SHA-256 `62684bb24994bd0b029e2b06eca7482daeacd95c8fb239bcf35f1fea191503de`

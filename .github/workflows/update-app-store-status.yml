@@ -29,6 +29,9 @@ jobs:
       - name: Check Apple public catalog
         run: node scripts/update-app-store-status.mjs
 
+      - name: Update public cards and store links
+        run: node scripts/sync-store-presentation.mjs
+
       - name: Verify generated site
         run: node scripts/verify-public-deployment.mjs
 
@@ -36,7 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/app-store-status.json
+          git add data/app-store-status.json index.html apps/*/index.html
           if git diff --cached --quiet; then
             echo "No status change to publish."
           else

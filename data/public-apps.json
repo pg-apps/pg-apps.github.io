@@ -5,6 +5,7 @@
     {
       "slug": "funkle",
       "name": "Funkle",
+      "summary": "Ein kleiner nächster Schritt für deinen Alltag – mit passendem Timer und lokalen, freiwilligen Rückmeldungen.",
       "bundleId": "io.github.pg-apps.funkle",
       "icon": "app-icons/funkle.png",
       "copyright": "2026 Philipp Graef"
@@ -12,6 +13,7 @@
     {
       "slug": "nadumo",
       "name": "nadumo",
+      "summary": "Dokumente lokal erfassen, Aufgaben und Fristen am Original prüfen und den nächsten Schritt kontrolliert erledigen.",
       "bundleId": "com.pgapps.orydo",
       "icon": "nadumo-app-icon.png",
       "copyright": "2026 Philipp Graef"
@@ -33,11 +35,12 @@
     {
       "slug": "rynolo",
       "name": "RYNOLO",
+      "summary": "Deine private Reisekarte mit Erinnerungen, verifizierten Besuchen, Entdeckungen und Verified XP.",
       "bundleId": "com.philippgraef.rynolo",
       "icon": "app-icons/rynolo.png",
       "tagline": "Private travel memories, verified visits and goals that stay honest.",
       "platform": "iPhone · iOS 18+",
-      "submissionStatus": "prepared",
+      "submissionStatus": "published",
       "accent": "#087f86",
       "accent2": "#8ce3cd"
     },
@@ -58,6 +61,7 @@
     {
       "slug": "pond-sparks",
       "name": "Pond Sparks",
+      "summary": "Mit Gefühl angeln, acht Fischarten entdecken und deinen eigenen Teich füllen – mit Bewegungs- oder Touch-Steuerung.",
       "bundleId": "com.teichfunken.pond",
       "icon": "app-icons/pond-sparks.png",
       "copyright": "2026 Philipp Graef"

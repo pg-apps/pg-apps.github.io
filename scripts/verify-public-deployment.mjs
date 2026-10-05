@@ -9,7 +9,7 @@ if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.apps)) throw new Error
 if (statuses.schemaVersion !== 1 || typeof statuses.apps !== "object" || statuses.apps === null) throw new Error("Invalid App Store status file");
 
 const slugs = new Set();
-const allowedBundleIDs = new Set(["com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo", "io.github.pg-apps.thirty", "de.philippgraef.RechtMedizinisch", "com.pgapps.orydo", "com.teichfunken.pond"]);
+const allowedBundleIDs = new Set(["io.github.pg-apps.funkle", "com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo", "io.github.pg-apps.thirty", "de.philippgraef.RechtMedizinisch", "com.pgapps.orydo", "com.teichfunken.pond"]);
 for (const app of catalog.apps) {
   if (!app?.slug || !app?.name || !app?.bundleId || !app?.icon || slugs.has(app.slug)) throw new Error("Invalid or duplicate public app entry");
   if (!allowedBundleIDs.has(app.bundleId)) throw new Error(`Non-canonical public bundle ID for ${app.slug}`);
@@ -34,7 +34,7 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
-const legalOnlySlugs = new Set(["funkle"]);
+const legalOnlySlugs = new Set();
 const legacyRedirectSlugs = new Set(["orydo"]);
 for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
 const legacyRedirect = await readFile(path.join(root, "apps/orydo/index.html"), "utf8");
@@ -69,15 +69,22 @@ for (const slug of Object.keys(statuses.apps)) if (!slugs.has(slug)) throw new E
 
 const home = await readFile(path.join(root, "index.html"), "utf8");
 for (const app of catalog.apps) {
-  if (!home.includes(`href="apps/${app.slug}/"`)) throw new Error(`Homepage link missing for ${app.slug}`);
-  if (!home.includes(`src="assets/${app.icon}"`)) throw new Error(`Homepage icon path does not match the catalog for ${app.slug}`);
-  if (!home.includes(`data-store-status="${app.slug}"`)) throw new Error(`Homepage status marker missing for ${app.slug}`);
+  const released = statuses.apps[app.slug]?.status === "published";
+  if (released) {
+    if (!home.includes(`href="apps/${app.slug}/"`)) throw new Error(`Homepage link missing for ${app.slug}`);
+    if (!home.includes(`src="assets/${app.icon}"`)) throw new Error(`Homepage icon path does not match the catalog for ${app.slug}`);
+    if (!home.includes(`data-store-status="${app.slug}"`)) throw new Error(`Homepage status marker missing for ${app.slug}`);
+    const status = statuses.apps[app.slug];
+    if (status.sellerName !== "Philipp Graef" || status.artistId !== 6807551307) throw new Error(`Unconfirmed developer for ${app.slug}`);
+    if (!home.includes(status.trackViewUrl.replaceAll("&", "&amp;"))) throw new Error(`Homepage store link missing for ${app.slug}`);
+  } else if (home.includes(`href="apps/${app.slug}/"`) || home.includes(`src="assets/${app.icon}"`)) {
+    throw new Error(`Unreleased identity on the anonymous portfolio: ${app.slug}`);
+  }
 
   const appPagePath = path.join(root, "apps", app.slug, "index.html");
   const appPage = await readFile(appPagePath, "utf8");
-  if (!appPage.includes(`data-app-page="${app.name}"`)) throw new Error(`App-page identity missing for ${app.slug}`);
-  if (!appPage.includes(`data-store-status="${app.slug}"`)) throw new Error(`App-page status marker missing for ${app.slug}`);
-  if (!appPage.includes(app.bundleId)) throw new Error(`App-page bundle ID missing for ${app.slug}`);
+  if (!appPage.includes(app.name)) throw new Error(`App-page identity missing for ${app.slug}`);
+  if (released && !appPage.includes(`data-store-link="${app.slug}"`)) throw new Error(`App-page store link missing for ${app.slug}`);
   if (!appPage.includes(`src="../../assets/${app.icon}"`)) throw new Error(`App-page icon path does not match the catalog for ${app.slug}`);
 
   const rawAmpersand = /&(?![A-Za-z][A-Za-z0-9]+;|#[0-9]+;|#x[0-9A-Fa-f]+;)/;

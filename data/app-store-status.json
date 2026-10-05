@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T09:57:45.733Z",
+  "generatedAt": "2026-10-05T14:21:08.022Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,38 +10,50 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-09-24T16:27:00Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
-      "trackViewUrl": "https://apps.apple.com/de/app/funkle/id6807551305",
-      "version": "1.0"
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
+      "trackViewUrl": "https://apps.apple.com/de/app/funkle/id6807551305?uo=4",
+      "version": "1.0",
+      "releaseDate": "2026-09-23T05:13:15Z"
     },
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
-      "status": "unpublished",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
-      "reason": "not_found_in_public_storefronts"
+      "status": "published",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
+      "storefront": "de",
+      "trackId": 6807579632,
+      "trackName": "nadumo",
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
+      "trackViewUrl": "https://apps.apple.com/de/app/nadumo/id6807579632?uo=4",
+      "version": "1.0.1",
+      "releaseDate": "2026-10-01T10:36:39Z"
     },
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "reason": "not_found_in_public_storefronts"
     },
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "unpublished",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
       "trackViewUrl": "https://apps.apple.com/de/app/rynolo/id6807559572?uo=4",
       "version": "1.1",
       "releaseDate": "2026-09-23T18:38:01Z"
@@ -49,20 +61,27 @@
     "thirty": {
       "bundleId": "io.github.pg-apps.thirty",
       "status": "unpublished",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "reason": "not_found_in_public_storefronts"
     },
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "unpublished",
-      "checkedAt": "2026-09-24T09:57:45.733Z",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
       "reason": "not_found_in_public_storefronts"
     },
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
-      "status": "unpublished",
-      "checkedAt": null,
-      "reason": "non_canonical_bundle_id"
+      "status": "published",
+      "checkedAt": "2026-10-05T14:21:08.022Z",
+      "storefront": "de",
+      "trackId": 6815104955,
+      "trackName": "Pond Sparks",
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
+      "trackViewUrl": "https://apps.apple.com/de/app/pond-sparks/id6815104955?uo=4",
+      "version": "1.0.0",
+      "releaseDate": "2026-10-05T10:46:55Z"
     }
   }
 }

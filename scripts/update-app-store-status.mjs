@@ -13,7 +13,7 @@ if (publicCatalog.schemaVersion !== 1 || !Array.isArray(publicCatalog.apps)) {
   throw new Error("data/public-apps.json has an unsupported format");
 }
 const publicApps = publicCatalog.apps.map((app) => ({ ...app, bundle: app.bundleId }));
-const allowedBundleIDs = new Set(["io.github.pg-apps.funkle", "com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo", "io.github.pg-apps.thirty", "de.philippgraef.RechtMedizinisch", "com.pgapps.orydo"]);
+const allowedBundleIDs = new Set(["io.github.pg-apps.funkle", "com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo", "io.github.pg-apps.thirty", "de.philippgraef.RechtMedizinisch", "com.pgapps.orydo", "com.teichfunken.pond"]);
 const checkedAt = new Date().toISOString();
 
 const lookup = async (bundleId, storefront) => {
@@ -50,8 +50,10 @@ const checkApp = async (app) => {
   for (const storefront of storefronts) {
     try {
       const match = await lookup(app.bundle, storefront);
-      successfulLookups += 1;
       if (match) {
+        if (match.sellerName !== "Philipp Graef" || match.artistId !== 6807551307) {
+          throw new Error("Apple developer does not match the confirmed PG Apps account");
+        }
         return {
           bundleId: app.bundle,
           status: "published",
@@ -59,11 +61,14 @@ const checkApp = async (app) => {
           storefront,
           trackId: match.trackId ?? null,
           trackName: match.trackName ?? app.name,
+          sellerName: match.sellerName,
+          artistId: match.artistId,
           trackViewUrl: match.trackViewUrl ?? null,
           version: match.version ?? null,
           releaseDate: match.currentVersionReleaseDate ?? match.releaseDate ?? null,
         };
       }
+      successfulLookups += 1;
     } catch (error) {
       failures.push(`${storefront}: ${error instanceof Error ? error.message : String(error)}`);
     }

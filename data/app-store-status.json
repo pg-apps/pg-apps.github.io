@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-06T12:00:18.897Z",
+  "generatedAt": "2026-10-07T11:45:40.398Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,7 +10,7 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
@@ -23,7 +23,7 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "published",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "storefront": "de",
       "trackId": 6807579632,
       "trackName": "nadumo",
@@ -36,19 +36,19 @@
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "reason": "not_found_in_public_storefronts"
     },
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "unpublished",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
@@ -61,19 +61,19 @@
     "thirty": {
       "bundleId": "io.github.pg-apps.thirty",
       "status": "unpublished",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "reason": "not_found_in_public_storefronts"
     },
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "unpublished",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "reason": "not_found_in_public_storefronts"
     },
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
       "status": "published",
-      "checkedAt": "2026-10-06T12:00:18.897Z",
+      "checkedAt": "2026-10-07T11:45:40.398Z",
       "storefront": "de",
       "trackId": 6815104955,
       "trackName": "Pond Sparks",

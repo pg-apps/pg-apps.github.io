@@ -12,7 +12,7 @@ const released = catalog.apps.filter(app => {
   const url = new URL(status.trackViewUrl);
   if (url.protocol !== 'https:' || url.hostname !== 'apps.apple.com') throw new Error('Invalid store link');
   return true;
-}).sort((a, b) => ['funkle', 'rynolo', 'nadumo', 'pond-sparks'].indexOf(a.slug) - ['funkle', 'rynolo', 'nadumo', 'pond-sparks'].indexOf(b.slug));
+}).sort((a, b) => ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch'].indexOf(a.slug) - ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch'].indexOf(b.slug));
 
 function replaceElement(html, tag, opener, replacement) {
   const start = html.indexOf(opener);
@@ -45,7 +45,7 @@ for (const app of released) {
   const status = statuses.apps[app.slug];
   const file = path.join(root, 'apps', app.slug, 'index.html');
   let html = await readFile(file, 'utf8');
-  html = html.replace(new RegExp(`<span\\b[^>]*data-store-status="${app.slug}"[^>]*>[^<]*<\\/span>`, 'g'), `<span class="publication-status is-published" data-store-status="${app.slug}" data-submission-status="published">Im App Store</span>`);
+  html = html.replace(new RegExp(`<span\\b[^>]*data-store-status="${app.slug}"[^>]*>[^<]*<\\/span>`, 'g'), `<span class="${app.slug === 'recht-medizinisch' ? 'badge ' : ''}publication-status is-published" data-store-status="${app.slug}" data-submission-status="published">Im App Store</span>`);
   html = html.replace(new RegExp(`<p\\b[^>]*data-store-detail="${app.slug}"[^>]*>[^<]*<\\/p>`, 'g'), `<p data-store-detail="${app.slug}">${escape(app.name)} ist im deutschen App Store verfügbar (Version ${escape(status.version)}).</p>`);
   html = html.replace(new RegExp(`<dd\\b[^>]*data-store-checked="${app.slug}"[^>]*>[^<]*<\\/dd>`, 'g'), `<dd data-store-checked="${app.slug}">${escape(status.checkedAt.slice(0,10))}</dd>`);
   html = html.replace(/(<dt>Version<\/dt><dd>)[^<]+(<\/dd>)/g, `$1${escape(status.version)}$2`);

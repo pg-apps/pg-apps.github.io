@@ -54,6 +54,8 @@
     {
       "slug": "recht-medizinisch",
       "name": "Recht Medizinisch",
+      "summary": "Medizinrecht verstehen und anwenden: 15 fallbasierte Kurse, 474 Lernfolien, Leitentscheidungen und Übungen zum Podcast.",
+      "submissionStatus": "published",
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "icon": "app-icons/recht-medizinisch-app-icon-20260909.png",
       "copyright": "2026 Philipp Graef"

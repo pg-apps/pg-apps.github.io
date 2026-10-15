@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T10:09:19.107Z",
+  "generatedAt": "2026-10-15T09:51:59.623Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,7 +10,7 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
@@ -23,7 +23,7 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "published",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "storefront": "de",
       "trackId": 6807579632,
       "trackName": "nadumo",
@@ -36,19 +36,19 @@
     "rly": {
       "bundleId": "com.philippgraef.rly",
       "status": "unpublished",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "reason": "not_found_in_public_storefronts"
     },
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "unpublished",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "reason": "not_found_in_public_storefronts"
     },
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
@@ -61,13 +61,13 @@
     "thirty": {
       "bundleId": "io.github.pg-apps.thirty",
       "status": "unpublished",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "reason": "not_found_in_public_storefronts"
     },
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "published",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "storefront": "de",
       "trackId": 6809199673,
       "trackName": "Recht Medizinisch",
@@ -80,7 +80,7 @@
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
       "status": "published",
-      "checkedAt": "2026-10-14T10:09:19.107Z",
+      "checkedAt": "2026-10-15T09:51:59.623Z",
       "storefront": "de",
       "trackId": 6815104955,
       "trackName": "Pond Sparks",

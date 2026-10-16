@@ -34,3 +34,17 @@ Zwei institutionelle Verwaltungsreferenzen, keine vollständigen/exklusiven Spra
 The full machine-readable derivative is freely available under ODbL 1.0 without additional reuse restrictions, fees, account requirement or app/portal-terms restrictions. Contains geometry/provenance only, no user collection/visit/account data. Publication does not itself authorize catalog import.
 
 - [vainakh_institutional_references_20261003.geojson](vainakh_institutional_references_20261003.geojson) — SHA-256 `62684bb24994bd0b029e2b06eca7482daeacd95c8fb239bcf35f1fea191503de`
+
+## Limón / Limon Kryol partial cultural reference — 2026-10-16
+
+© OpenStreetMap contributors — https://www.openstreetmap.org/copyright
+
+OpenStreetMap / Wambacher via geoBoundaries gbOpen. Source dataset CRI-ADM3-57209832, feature57209832B54015413222300, represented year2017, not a 2026 survey. Metadata: https://www.geoboundaries.org/api/current/gbOpen/CRI/ADM3/
+
+Select one Limón district polygon from the full delivered472-feature layer. Preserve all581 delivered XYpositions and its one outer ring; ring winding only normalized. No new simplification, reprojection, union, clipping, survey accuracy or complete real-world island inventory is claimed. Original OSM relation/version not supplied. Internal staging booleans omitted, all other geographic provenance retained. The separate restricted INEC UGED geometry is not included or relicensed; no HDX or website CC licence is transferred.
+
+Ein ungefährer partieller Kulturbezug für Limon Kryol, keine ganze Provinz oder vollständige, ausschließliche, einheitliche Sprachfläche, aktuelle amtliche Grenze, exklusive Buchbindung oder Orts-/Besuchsbestätigung. Approximate partial cultural orientation, not an entire province, complete/exclusive/uniform speech area, current official boundary, exclusive printing association, acquisition location or personal visit proof.
+
+ODbL1.0: https://opendatacommons.org/licenses/odbl/1-0/ — the entire machine-readable derivative is freely available without extra fee, account, technical access or app/portal-terms restrictions. No private collections, visits, photos, accounts or App source are included. Publication is not App-import or release approval.
+
+- [limonese_limon_gbopen2017_local_reference_20261016.geojson](limonese_limon_gbopen2017_local_reference_20261016.geojson) — SHA-256 `f44b1198505994d52c44f324a62e91373d326a88ec443fe3598cef19d567c9aa`

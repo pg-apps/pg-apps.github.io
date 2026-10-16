@@ -28,6 +28,13 @@
       "sha256": "62684bb24994bd0b029e2b06eca7482daeacd95c8fb239bcf35f1fea191503de",
       "sourceURL": "https://www.openstreetmap.org/relation/253252",
       "additionalSourceURL": "https://www.openstreetmap.org/relation/109877"
+    },
+    {
+      "file": "limonese_limon_gbopen2017_local_reference_20261016.geojson",
+      "sha256": "f44b1198505994d52c44f324a62e91373d326a88ec443fe3598cef19d567c9aa",
+      "sourceURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CRI/ADM3/geoBoundaries-CRI-ADM3.geojson",
+      "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "sourceYearRepresented": "2017"
     }
   ]
 }

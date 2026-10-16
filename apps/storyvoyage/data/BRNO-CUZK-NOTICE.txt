@@ -1,0 +1,45 @@
+Brno / Brünn — partial municipal cultural reference for Hantec
+
+Source and attribution: ČÚZK, 2026.
+Dataset: INSPIRE Administrative Units (AU), CZ-00025712-CUZK_AU:AU.SD.1.
+Feature: AU.4.582786; municipality Brno, Czechia; RUIAN municipality582786.
+Feature data version: 2026-10-13T13:07:12Z; retrieved 16 October 2026.
+This is not an individual geometry survey date or a linguistic survey.
+
+Source dataset metadata (revision 14 August 2026):
+https://geoportal.gov.cz/php/micka/record/basic/CZ-00025712-CUZK_SERIES-MD_AU
+Original bounded WFS query:
+https://services.cuzk.gov.cz/wfs/inspire-AU-wfs.asp?service=WFS&version=2.0.0&request=GetFeature&storedquery_id=GetUnitByName&UNIT_NAME=Brno&NAT_LEVEL=Obec&srsName=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F4326&count=2
+
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by/4.0/legalcode.en
+Provider terms:
+https://cuzk.gov.cz/Predpisy/Podminky-poskytovani-prostor-dat-a-sitovych-sluzeb/Podminky-poskytovani-prostorovych-dat-CUZK.aspx
+The data are supplied without warranty, subject to the licence disclaimers.
+The licensed geodata and metadata may be reused under those terms; this is
+not a licence to the application, literary text, cover art or illustrations.
+
+Modifications: selected the complete municipal feature, converted GML to
+GeoJSON and permuted EPSG4326 latitude/longitude to longitude/latitude.
+Removed only one exactly repeated consecutive source position (zero-based
+index3780) and its zero-length edge:6792 source positions,6791 output points.
+No distinct coordinate, component, hole or area removed; no simplification,
+reprojection, union, country clipping or traced geometry. Own identifier and
+bilingual labels added. All source positions are exactly reconstructible:
+insert a duplicate of the preceding point at zero-based index3780, then swap
+longitude/latitude back to latitude/longitude. The original source response
+is retained separately as evidence, not silently edited.
+
+The publisher associates physical ISBN9788075657763 with Brno Hantec:
+https://www.jota.cz/male-principal.html
+That does not grant rights to its text or illustrations, establish the whole
+Hantec speech area, or prove an exclusive printing locality. This municipal
+outline is only a partial approximate cultural reference, not an exact,
+uniform, exclusive or exhaustive dialect/speaker boundary. The surrounding
+region and diaspora are not covered. No acquisition place, exact-location
+confirmation, official-language status or personal visit is inferred.
+
+No affiliation, sponsorship or endorsement by ČÚZK or Jota is implied.
+This public file contains no personal collection, photo, account or travel
+history data. It is available without login, payment or technical access controls.

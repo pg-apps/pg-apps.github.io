@@ -1,0 +1,55 @@
+Donegal language-planning reference geometry
+
+© Tailte Éireann. Gaeltacht Language Planning Areas - National Administrative
+Boundaries - Ungeneralised - 2026. Gaeltacht LPA Ungen - 2026, layer 1.
+
+Dataset-specific licence: Creative Commons Attribution 4.0 International.
+https://creativecommons.org/licenses/by/4.0/
+
+Source item and its licence statement:
+https://www.arcgis.com/sharing/rest/content/items/5c4ae6fa71c54e898b78d44e3972dde9?f=json
+
+Source geometry service:
+https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/NatAdminBdry_2026_A_view/FeatureServer/1
+
+Selection: BDY_ID 59020 through 59027 inclusive; outFields=*;
+returnGeometry=true; outSR=4326; orderByFields=OBJECTID;
+resultRecordCount=2000; f=geojson. Retrieved 16 October 2026.
+
+Independent planning-area names and Donegal grouping:
+https://udaras.ie/en/our-language-the-gaeltacht/language-planning-areas/
+
+Changes by FoxieVoyage: all 62 published components of the eight Donegal
+planning areas are retained as eight MultiPolygon features. Components are
+grouped by their original BDY_ID, without spatial union. Exterior winding is
+reversed; all 153,008 source longitude/latitude positions remain recoverable
+without rounding, simplification or dropped positions. The producer served
+the requested outSR=4326; no local reprojection was performed. The 62 complete
+native property objects, source component order and both GAELTACHT_AREA Y/N
+values remain intact. Own reference IDs, bilingual labels and scope metadata
+are added. The Y/N flags are opaque original values, not evidence of speaker
+presence or absence. The source GeoJSON SHA256 is
+6f153b885c872363513258d34dfcb6765323a5c2226fd049c4041f54432d912f.
+The downloadable derived GeoJSON SHA256 is
+287ecf92f3218f9c3c64135c15dda5d94a85162ce1fde8218d7d69c3d751a870.
+
+These are approximate institutional planning references for the existing
+Donegal Irish catalogue identity, not all County Donegal or Ireland and not
+exact, exhaustive, uniform or exclusive dialect boundaries. They are not a
+printing-specific territory claim, speaker census, acquisition place, GPS
+confirmation or personal visit. Speakers may live outside planning areas;
+not every location within them has speakers. Publication and edit dates are
+administrative metadata, not a 2026 linguistic survey. The reference-quality
+weight is not a population percentage.
+
+Tailte Éireann describes the dataset as for reference purposes only and
+warns that boundaries may not comply with the Boundary Survey Acts and
+disclaims responsibility for errors, omissions and resulting loss. Consult
+the original item for the complete producer statement. The data.gov.ie
+catalogue wrapper says "No licence specified"; attribution here relies on
+the linked dataset item's explicit CC BY 4.0 statement, not that wrapper.
+
+No affiliation, sponsorship or endorsement by Tailte Éireann, Údarás na
+Gaeltachta or Éabhlóid is implied. No private collection, photo, account,
+location history, book text, cover or illustration is included. No additional
+licence restrictions are imposed on the CC BY 4.0 geometry.

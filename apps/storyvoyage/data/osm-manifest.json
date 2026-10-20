@@ -35,6 +35,18 @@
       "sourceURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CRI/ADM3/geoBoundaries-CRI-ADM3.geojson",
       "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
       "sourceYearRepresented": "2017"
+    },
+    {
+      "file": "baghdadi_baghdad_osm_partial_reference_20261020.geojson",
+      "sha256": "50c6c9691f5416e5d79d5cec1af272213ac9c15ebb6f90354b686d255c2ee6c6",
+      "sourceURL": "https://www.openstreetmap.org/relation/5638803",
+      "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "sourceRelationID": 5638803,
+      "sourceRelationVersion": 34,
+      "sourceRelationTimestamp": "2026-08-02T08:31:01Z",
+      "originalPositionCount": 593,
+      "approximatePartialCulturalReference": true,
+      "activeInApp": false
     }
   ]
 }

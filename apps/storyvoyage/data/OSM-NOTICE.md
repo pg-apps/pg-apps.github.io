@@ -48,3 +48,19 @@ Ein ungefährer partieller Kulturbezug für Limon Kryol, keine ganze Provinz ode
 ODbL1.0: https://opendatacommons.org/licenses/odbl/1-0/ — the entire machine-readable derivative is freely available without extra fee, account, technical access or app/portal-terms restrictions. No private collections, visits, photos, accounts or App source are included. Publication is not App-import or release approval.
 
 - [limonese_limon_gbopen2017_local_reference_20261016.geojson](limonese_limon_gbopen2017_local_reference_20261016.geojson) — SHA-256 `f44b1198505994d52c44f324a62e91373d326a88ec443fe3598cef19d567c9aa`
+
+## Baghdad partial city reference — 2026-10-20
+
+© OpenStreetMap contributors — https://www.openstreetmap.org/copyright
+
+ODbL 1.0: https://opendatacommons.org/licenses/odbl/1-0/
+
+Source: https://api.openstreetmap.org/api/0.6/relation/5638803/full.json — relation5638803, version34, timestamp2026-08-02T08:31:01Z; whole source SHA-256 `41d16155c9d2f697e899a4a26db27002893e5a7c61c4ea2b49cfac288ebf9769`. Join55 outer ways by shared endpoint IDs; retain all593 original XYpositions in one outer ring. No simplification, reprojection, clipping, union or new tracing. Retain the complete tested derivative, including approximate scope and inactive staging metadata. OSM editor account metadata is not included.
+
+Ungefährer partieller Stadtbezug für Bagdad-Arabisch, keine vollständige oder einheitliche Sprachfläche, kein ganzer Irak oder Gouvernement, keine nachgewiesene heutige amtliche Grenze. Approximate partial city orientation for Baghdadi Arabic, not a complete or uniform speaker area, the whole of Iraq or a governorate, or a proven current official boundary. No GPS/location confirmation or personal visit proof.
+
+The historical municipal context is discussed separately in the January2022 JICA report (https://openjicareport.jica.go.jp/pdf/12367256.pdf). No JICA map or coordinates were copied, traced or relicensed into this derivative; historical context does not establish coordinate equivalence.
+
+The entire machine-readable derivative below is freely available under ODbL1.0 without extra fee, account, access restriction or additional app/portal-terms restriction. Die vollständige maschinenlesbare Ableitung steht unter ODbL1.0 kostenlos ohne Konto oder zusätzliche App-/Portal-Nutzungsbeschränkungen bereit. Only public geometry and source/scope metadata; no private collections, visits, photos, accounts or App source. Publication is not catalog activation, native UI acceptance or release approval.
+
+- [baghdadi_baghdad_osm_partial_reference_20261020.geojson](baghdadi_baghdad_osm_partial_reference_20261020.geojson) — SHA-256 `50c6c9691f5416e5d79d5cec1af272213ac9c15ebb6f90354b686d255c2ee6c6`

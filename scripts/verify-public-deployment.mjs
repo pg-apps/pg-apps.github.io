@@ -34,7 +34,7 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
-const legalOnlySlugs = new Set();
+const legalOnlySlugs = new Set(["muvamii"]);
 const legacyRedirectSlugs = new Set(["orydo"]);
 for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
 const legacyRedirect = await readFile(path.join(root, "apps/orydo/index.html"), "utf8");
@@ -48,6 +48,15 @@ for (const slug of legalOnlySlugs) {
     throw new Error(`Legal-only page contains presentation or active content: ${slug}`);
   }
   if (catalog.apps.some((app) => app.slug === slug)) throw new Error(`Legal-only page exposed as app profile: ${slug}`);
+  const privacy = await readFile(path.join(root, "apps", slug, "privacy.html"), "utf8");
+  if (/<(?:img|video|script|iframe)\b/i.test(privacy) || /data-app-page|data-store-status|apps\.apple\.com/i.test(privacy)) {
+    throw new Error(`Legal-only privacy page contains presentation or active content: ${slug}`);
+  }
+  for (const anchor of ["datenschutz", "privacy"]) {
+    if (!privacy.includes(`id="${anchor}"`)) throw new Error(`Privacy anchor missing: ${slug}/${anchor}`);
+    if (!page.includes(`href="privacy.html#${anchor}"`)) throw new Error(`Privacy link missing: ${slug}/${anchor}`);
+  }
+
 }
 
 for (const app of catalog.apps) {

@@ -24,6 +24,8 @@
 .home-hero .pg-claim { max-width: none; font-size: clamp(1.4rem, 5.8vw, 4.8rem); line-height: 1.18; }
 .pg-claim span { display: block; white-space: nowrap; }
 .pg-claim em { color: #782e43; font-style: italic; font-weight: inherit; }
+.portfolio-checked { color: var(--muted); font-size: .9rem; }
+.release-facts { max-width: 1180px; margin: 28px auto; padding: 20px 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 @media (min-width: 900px) { .pg-claim span + span { margin-left: .8em; } }
 @media (min-width: 901px) { .app-grid > .app-card:nth-child(-n+4) { grid-column: span 6; } }
 

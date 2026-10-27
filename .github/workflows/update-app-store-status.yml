@@ -33,7 +33,9 @@ jobs:
         run: node scripts/sync-store-presentation.mjs
 
       - name: Verify generated site
-        run: node scripts/verify-public-deployment.mjs
+        run: |
+          node scripts/test-store-record.mjs
+          node scripts/verify-public-deployment.mjs
 
       - name: Publish changed status
         run: |

@@ -8,7 +8,7 @@ const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<'
 const released = catalog.apps.filter(app => {
   const status = statuses.apps[app.slug];
   if (status?.status !== 'published') return false;
-  if (status.bundleId !== app.bundleId || status.sellerName !== 'Philipp Graef' || status.artistId !== 6807551307) throw new Error(`Unconfirmed developer for ${app.slug}`);
+  if (status.bundleId !== app.bundleId || status.trackId !== app.appleId || status.sellerName !== 'Philipp Graef' || status.artistId !== 6807551307) throw new Error(`Unconfirmed developer for ${app.slug}`);
   const url = new URL(status.trackViewUrl);
   if (url.protocol !== 'https:' || url.hostname !== 'apps.apple.com') throw new Error('Invalid store link');
   return true;
@@ -33,12 +33,16 @@ const cards = released.map(app => {
   if (!app.summary) throw new Error(`Missing reviewed description for ${app.slug}`);
   return `<article class="app-card"><a href="apps/${escape(app.slug)}/"><span class="app-icon"><img src="assets/${escape(app.icon)}" alt="${escape(app.name)} App-Icon" width="384" height="384"></span><h3>${escape(app.name)}</h3></a><span class="publication-status is-published" data-store-status="${escape(app.slug)}" data-submission-status="published">Im App Store</span><p>${escape(app.summary)}</p><div class="card-meta"><a class="store-cta" data-store-link="${escape(app.slug)}" href="${escape(status.trackViewUrl)}" rel="noreferrer">Im App Store öffnen ↗</a><a href="apps/${escape(app.slug)}/">Support &amp; Recht →</a></div></article>`;
 });
-const coming = catalog.apps.length - released.length;
+if (released.length !== catalog.apps.length) throw new Error('Only confirmed releases belong in the public catalog');
+const coming = catalog.comingSoonCount ?? 0;
+if (!Number.isInteger(coming) || coming < 0 || coming > 30) throw new Error('Invalid anonymous preview count');
 for (let i = 0; i < coming; i++) cards.push('<article class="app-card is-coming-soon"><span class="coming-art" aria-hidden="true"></span><span class="publication-status is-unpublished">Coming soon</span><h3>Etwas Neues entsteht.</h3><p>Mehr zu dieser App erfährst du zum Launch.</p></article>');
 home = replaceElement(home, 'div', '<div class="app-grid">', `<div class="app-grid">${cards.join('\n')}</div>`);
 home = replaceElement(home, 'aside', '<aside class="hero-note">', `<aside class="hero-note"><strong>Jetzt im App Store</strong><p>${released.map(app => escape(app.name)).join(', ')} sind veröffentlicht. Entdecke die Apps und ihre Support- und Rechtsinformationen.</p></aside>`);
 home = home.replace('Hier findest du Informationen, Support und Rechtliches zu unseren Apps. Bei Apps in Vorbereitung zeigen wir transparent, dass sie noch nicht im App Store verfügbar sind.', 'Entdecke unsere veröffentlichten Apps. Datenschutz, Nutzungsbedingungen und Support findest du für jede App auf ihrer eigenen Seite.');
 home = home.replace('Der öffentliche Status wird getrennt vom technischen Vorbereitungsstand ausgewiesen.', 'Direkt zu den Apps im Store oder zu Support und Rechtlichem. Weitere Apps folgen.');
+home = home.replace(/<p class="portfolio-checked">[\s\S]*?<\/p>/, '');
+home = home.replace('<div class="app-grid">', `<p class="portfolio-checked">App-Store-Stand geprüft am <time datetime="${statuses.generatedAt.slice(0,10)}">${new Intl.DateTimeFormat('de-DE', {dateStyle:'long', timeZone:'Europe/Berlin'}).format(new Date(statuses.generatedAt))}</time>.</p><div class="app-grid">`);
 await writeFile(path.join(root, 'index.html'), home);
 
 for (const app of released) {
@@ -49,6 +53,10 @@ for (const app of released) {
   html = html.replace(new RegExp(`<p\\b[^>]*data-store-detail="${app.slug}"[^>]*>[^<]*<\\/p>`, 'g'), `<p data-store-detail="${app.slug}">${escape(app.name)} ist im deutschen App Store verfügbar (Version ${escape(status.version)}).</p>`);
   html = html.replace(new RegExp(`<dd\\b[^>]*data-store-checked="${app.slug}"[^>]*>[^<]*<\\/dd>`, 'g'), `<dd data-store-checked="${app.slug}">${escape(status.checkedAt.slice(0,10))}</dd>`);
   html = html.replace(/(<dt>Version<\/dt><dd>)[^<]+(<\/dd>)/g, `$1${escape(status.version)}$2`);
+  html = html.replace(/<p class="release-facts">[\s\S]*?<\/p>/, '');
+  const date = new Intl.DateTimeFormat('de-DE', {dateStyle:'long', timeZone:'Europe/Berlin'});
+  const releaseFacts = `<p class="release-facts">Im App Store: Version ${escape(status.version)} · Systemvoraussetzung: iOS ${escape(status.minimumOsVersion)} oder neuer · Versionsveröffentlichung: ${date.format(new Date(status.releaseDate))} · Katalog geprüft: ${date.format(new Date(status.checkedAt))}.</p>`;
+  html = html.replace('</main>', `${releaseFacts}</main>`);
   html = html.replace(new RegExp(`<a\\b[^>]*data-store-link="${app.slug}"[^>]*>[^<]*<\\/a>`, 'g'), `<a data-store-link="${app.slug}" href="${escape(status.trackViewUrl)}" rel="noreferrer">Im App Store öffnen ↗</a>`);
   if (!html.includes(`data-store-link="${app.slug}"`)) html = html.replace('</main>', `<p class="shell"><a data-store-link="${app.slug}" href="${escape(status.trackViewUrl)}" rel="noreferrer">${escape(app.name)} im App Store öffnen ↗</a></p></main>`);
   await writeFile(file, html);

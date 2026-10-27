@@ -9,10 +9,11 @@ if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.apps)) throw new Error
 if (statuses.schemaVersion !== 1 || typeof statuses.apps !== "object" || statuses.apps === null) throw new Error("Invalid App Store status file");
 
 const slugs = new Set();
-const allowedBundleIDs = new Set(["io.github.pg-apps.funkle", "com.philippgraef.rly", "de.philippgraef.foxievoyage", "com.philippgraef.rynolo", "io.github.pg-apps.thirty", "de.philippgraef.RechtMedizinisch", "com.pgapps.orydo", "com.teichfunken.pond"]);
 for (const app of catalog.apps) {
   if (!app?.slug || !app?.name || !app?.bundleId || !app?.icon || slugs.has(app.slug)) throw new Error("Invalid or duplicate public app entry");
-  if (!allowedBundleIDs.has(app.bundleId)) throw new Error(`Non-canonical public bundle ID for ${app.slug}`);
+  if (!Number.isSafeInteger(app.appleId)) throw new Error(`Missing confirmed Apple ID for ${app.slug}`);
+  const status = statuses.apps[app.slug];
+  if (status?.status !== 'published' || status.trackId !== app.appleId || status.bundleId !== app.bundleId || status.artistId !== 6807551307 || status.sellerName !== 'Philipp Graef') throw new Error(`Unconfirmed public release: ${app.slug}`);
   slugs.add(app.slug);
 }
 
@@ -34,20 +35,24 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
-const legalOnlySlugs = new Set(["muvamii"]);
+const legalOnlySlugs = new Set(["muvamii", "rly", "storyvoyage", "thirty", "road-rivals"]);
+// Preserve the newer landing pages maintained by the BOLIQ project. These pages
+// and their existence do not imply a public App Store release.
+const separatelyMaintainedSlugs = new Set(["boliq"]);
 const legacyRedirectSlugs = new Set(["orydo"]);
-for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug) && !separatelyMaintainedSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
 const legacyRedirect = await readFile(path.join(root, "apps/orydo/index.html"), "utf8");
 if (!legacyRedirect.includes("../nadumo/") || !legacyRedirect.includes("location.hash")) throw new Error("nadumo legacy redirect must preserve legal anchors");
 for (const slug of legalOnlySlugs) {
   const page = await readFile(path.join(root, "apps", slug, "index.html"), "utf8");
-  for (const anchor of ["support", "datenschutz", "support-en", "privacy"]) {
+  for (const anchor of slug === 'muvamii' ? ["support", "datenschutz", "support-en", "privacy"] : ["support", "datenschutz"]) {
     if (!page.includes(`id="${anchor}"`)) throw new Error(`Legal anchor missing: ${slug}/${anchor}`);
   }
   if (/<(?:img|video|script|iframe)\b/i.test(page) || /data-app-page|data-store-status|apps\.apple\.com/i.test(page)) {
     throw new Error(`Legal-only page contains presentation or active content: ${slug}`);
   }
   if (catalog.apps.some((app) => app.slug === slug)) throw new Error(`Legal-only page exposed as app profile: ${slug}`);
+  if (slug !== 'muvamii') continue;
   const privacy = await readFile(path.join(root, "apps", slug, "privacy.html"), "utf8");
   if (/<(?:img|video|script|iframe)\b/i.test(privacy) || /data-app-page|data-store-status|apps\.apple\.com/i.test(privacy)) {
     throw new Error(`Legal-only privacy page contains presentation or active content: ${slug}`);
@@ -77,6 +82,16 @@ if (!noticePage.includes("Meldung per E-Mail")) throw new Error("RLY notice fall
 for (const slug of Object.keys(statuses.apps)) if (!slugs.has(slug)) throw new Error(`Status file exposes a non-public app: ${slug}`);
 
 const home = await readFile(path.join(root, "index.html"), "utf8");
+if (!Number.isInteger(catalog.comingSoonCount) || (home.match(/class="app-card is-coming-soon"/g) ?? []).length !== catalog.comingSoonCount) throw new Error('Anonymous preview count mismatch');
+for (const slug of [...legalOnlySlugs, ...separatelyMaintainedSlugs]) {
+  if (new RegExp(`(?:apps/${slug}/|data-store-status="${slug}")`).test(home)) throw new Error(`Unreleased identity on homepage: ${slug}`);
+}
+if (!home.includes('<em>Sorgfältig</em> entwickelt.') || !home.includes('<em>Transparent</em> veröffentlicht.')) throw new Error('Two-line claim missing');
+for (const file of ['assets/app-icons/storyvoyage.png','assets/rly-app-icon.png','assets/thirty-app-icon.png']) {
+  try { await access(path.join(root,file)); } catch { continue; }
+  throw new Error('Unreleased portfolio icon exported');
+}
+if (!home.includes('https://philippgraef.github.io/')) throw new Error('Personal website link missing');
 for (const app of catalog.apps) {
   const released = statuses.apps[app.slug]?.status === "published";
   if (released) {
@@ -120,4 +135,4 @@ for (const app of catalog.apps) {
   }
 }
 
-console.log(`Verified sanitized public deployment with ${catalog.apps.length} public apps.`);
+console.log(`Verified public deployment with ${catalog.apps.length} confirmed releases and ${catalog.comingSoonCount} anonymous previews.`);

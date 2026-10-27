@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-03T17:59:00.000Z",
+  "generatedAt": "2026-10-27T09:52:01.908Z",
   "apps": [
     {
       "slug": "funkle",
@@ -8,7 +8,8 @@
       "summary": "Ein kleiner nächster Schritt für deinen Alltag – mit passendem Timer und lokalen, freiwilligen Rückmeldungen.",
       "bundleId": "io.github.pg-apps.funkle",
       "icon": "app-icons/funkle.png",
-      "copyright": "2026 Philipp Graef"
+      "copyright": "2026 Philipp Graef",
+      "appleId": 6807551305
     },
     {
       "slug": "nadumo",
@@ -16,21 +17,8 @@
       "summary": "Dokumente lokal erfassen, Aufgaben und Fristen am Original prüfen und den nächsten Schritt kontrolliert erledigen.",
       "bundleId": "com.pgapps.orydo",
       "icon": "nadumo-app-icon.png",
-      "copyright": "2026 Philipp Graef"
-    },
-    {
-      "slug": "rly",
-      "name": "RLY?",
-      "bundleId": "com.philippgraef.rly",
-      "icon": "rly-app-icon.png",
-      "copyright": "2026 Philipp Graef"
-    },
-    {
-      "slug": "storyvoyage",
-      "name": "FoxieVoyage",
-      "bundleId": "de.philippgraef.foxievoyage",
-      "icon": "app-icons/storyvoyage.png",
-      "copyright": "2026 Philipp Graef"
+      "copyright": "2026 Philipp Graef",
+      "appleId": 6807579632
     },
     {
       "slug": "rynolo",
@@ -42,14 +30,8 @@
       "platform": "iPhone · iOS 18+",
       "submissionStatus": "published",
       "accent": "#087f86",
-      "accent2": "#8ce3cd"
-    },
-    {
-      "slug": "thirty",
-      "name": "THIRTY",
-      "bundleId": "io.github.pg-apps.thirty",
-      "icon": "thirty-app-icon.png",
-      "copyright": "2026 Philipp Graef"
+      "accent2": "#8ce3cd",
+      "appleId": 6807559572
     },
     {
       "slug": "recht-medizinisch",
@@ -58,7 +40,8 @@
       "submissionStatus": "published",
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "icon": "app-icons/recht-medizinisch-app-icon-20260909.png",
-      "copyright": "2026 Philipp Graef"
+      "copyright": "2026 Philipp Graef",
+      "appleId": 6809199673
     },
     {
       "slug": "pond-sparks",
@@ -66,7 +49,9 @@
       "summary": "Mit Gefühl angeln, acht Fischarten entdecken und deinen eigenen Teich füllen – mit Bewegungs- oder Touch-Steuerung.",
       "bundleId": "com.teichfunken.pond",
       "icon": "app-icons/pond-sparks.png",
-      "copyright": "2026 Philipp Graef"
+      "copyright": "2026 Philipp Graef",
+      "appleId": 6815104955
     }
-  ]
+  ],
+  "comingSoonCount": 6
 }

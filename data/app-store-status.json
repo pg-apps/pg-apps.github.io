@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T09:52:01.908Z",
+  "generatedAt": "2026-10-27T10:30:20.551Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,7 +10,7 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-10-27T09:52:01.908Z",
+      "checkedAt": "2026-10-27T10:30:20.551Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
@@ -24,7 +24,7 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "published",
-      "checkedAt": "2026-10-27T09:52:01.908Z",
+      "checkedAt": "2026-10-27T10:30:20.551Z",
       "storefront": "de",
       "trackId": 6807579632,
       "trackName": "nadumo",
@@ -38,7 +38,7 @@
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-10-27T09:52:01.908Z",
+      "checkedAt": "2026-10-27T10:30:20.551Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
@@ -52,7 +52,7 @@
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "published",
-      "checkedAt": "2026-10-27T09:52:01.908Z",
+      "checkedAt": "2026-10-27T10:30:20.551Z",
       "storefront": "de",
       "trackId": 6809199673,
       "trackName": "Recht Medizinisch",
@@ -66,7 +66,7 @@
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
       "status": "published",
-      "checkedAt": "2026-10-27T09:52:01.908Z",
+      "checkedAt": "2026-10-27T10:30:20.551Z",
       "storefront": "de",
       "trackId": 6815104955,
       "trackName": "Pond Sparks",

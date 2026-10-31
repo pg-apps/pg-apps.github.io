@@ -64,3 +64,19 @@ The historical municipal context is discussed separately in the January2022 JICA
 The entire machine-readable derivative below is freely available under ODbL1.0 without extra fee, account, access restriction or additional app/portal-terms restriction. Die vollständige maschinenlesbare Ableitung steht unter ODbL1.0 kostenlos ohne Konto oder zusätzliche App-/Portal-Nutzungsbeschränkungen bereit. Only public geometry and source/scope metadata; no private collections, visits, photos, accounts or App source. Publication is not catalog activation, native UI acceptance or release approval.
 
 - [baghdadi_baghdad_osm_partial_reference_20261020.geojson](baghdadi_baghdad_osm_partial_reference_20261020.geojson) — SHA-256 `50c6c9691f5416e5d79d5cec1af272213ac9c15ebb6f90354b686d255c2ee6c6`
+
+## Additional bundled research derivatives — 2026-10-30
+
+© OpenStreetMap contributors — https://www.openstreetmap.org/copyright
+
+ODbL 1.0: https://opendatacommons.org/licenses/odbl/1-0/
+
+These two resources are included in the App bundle, but are not activated in its current catalogue. Their publication supplies the exact complete machine-readable derivatives, without fee, account, additional app/portal restrictions or an assertion of release readiness. No private collection, visit, account, photo, or App source is included. Die Dateien sind gebündelte Recherchederivate, keine aktivierten Katalogzuordnungen oder Besuchsnachweise; die vollständigen Ableitungen sind kostenlos und ohne zusätzliche Nutzungsbeschränkung verfügbar.
+
+Ungordätsch: three named administrative references for Budakeszi, Zugliget and Jánoshegy, converted to GeoJSON Polygon geometry and qualified with source/scope metadata. This is not complete dialect coverage or whole Budapest district coverage. Original OSM editor-account metadata is not distributed. The published bytes retain all geometry and qualification fields of the bundled derivative.
+
+- [ungordaetsch_named_locality_references_20261020.geojson](ungordaetsch_named_locality_references_20261020.geojson) — SHA-256 `a89080720ba3071e480ec6fe8372389a20856ab36ff5cd4994ed2a2c625d576b`; source relations: https://www.openstreetmap.org/relation/113473, https://www.openstreetmap.org/relation/2806170, https://www.openstreetmap.org/relation/2806169
+
+Ivanovo: a separate approximate partial village administrative reference in Pančevo, Serbia. Retain the delivered 610-position ring, with every edge matched to the nine original OSM member ways; add partial cultural-reference metadata. No tracing, own reprojection or simplification. It is not the whole city, Banat, Bulgaria, Russia, a homogeneous language area or an exclusive printing/visit association.
+
+- [banat_bulgarian_ivanovo_osm_partial_reference_20261020.geojson](banat_bulgarian_ivanovo_osm_partial_reference_20261020.geojson) — SHA-256 `9f2391b66eb8cd02d26e02e746e49b60ca39d9d12233083d3c1f03b49ebc995f`; source relation: https://www.openstreetmap.org/relation/9797302

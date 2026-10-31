@@ -47,6 +47,28 @@
       "originalPositionCount": 593,
       "approximatePartialCulturalReference": true,
       "activeInApp": false
+    },
+    {
+      "file": "ungordaetsch_named_locality_references_20261020.geojson",
+      "sha256": "a89080720ba3071e480ec6fe8372389a20856ab36ff5cd4994ed2a2c625d576b",
+      "sourceURL": "https://api.openstreetmap.org/api/0.6/relation/113473/full.json",
+      "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "approximatePartialCulturalReference": true,
+      "activeInApp": false,
+      "includedInAppBundle": true,
+      "additionalSourceURLs": [
+        "https://api.openstreetmap.org/api/0.6/relation/2806170/full.json",
+        "https://api.openstreetmap.org/api/0.6/relation/2806169/full.json"
+      ]
+    },
+    {
+      "file": "banat_bulgarian_ivanovo_osm_partial_reference_20261020.geojson",
+      "sha256": "9f2391b66eb8cd02d26e02e746e49b60ca39d9d12233083d3c1f03b49ebc995f",
+      "sourceURL": "https://www.openstreetmap.org/relation/9797302",
+      "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "approximatePartialCulturalReference": true,
+      "activeInApp": false,
+      "includedInAppBundle": true
     }
   ]
 }

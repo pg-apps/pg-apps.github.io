@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 72" role="img" aria-label="PG Apps">
+  <path d="M7 20C7 10 15 5 26 6l29 3c9 1 13 8 12 19l-3 27c-1 9-8 14-18 13l-28-3C8 64 4 57 5 47L7 20Z" fill="#4b1737"/>
+  <text x="14" y="49" fill="#fffdf9" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="800" letter-spacing="-5">PG</text>
+  <g transform="translate(54 43)">
+    <rect width="30" height="27" rx="9" fill="#f1a9bf" stroke="#fffdf9" stroke-width="3"/>
+    <rect x="7" y="6" width="6" height="6" rx="2" fill="#4b1737"/>
+    <rect x="17" y="6" width="6" height="6" rx="2" fill="#4b1737"/>
+    <rect x="7" y="16" width="6" height="6" rx="2" fill="#4b1737"/>
+    <rect x="17" y="16" width="6" height="6" rx="2" fill="#fffdf9"/>
+  </g>
+</svg>

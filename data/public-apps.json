@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T09:52:01.908Z",
+  "generatedAt": "2026-11-02T08:06:13.142Z",
   "apps": [
     {
       "slug": "funkle",
@@ -36,7 +36,7 @@
     {
       "slug": "recht-medizinisch",
       "name": "Recht Medizinisch",
-      "summary": "Medizinrecht lernen: 15 Kurse, Fälle, Schaubilder und Übungen. Das große Inhaltsupdate verbindet App und Web mit gemeinsamen Freischaltungen.",
+      "summary": "Medizinrecht lernen: 15 Kurse, 105 Fallakten und 144 kostenlose Begriffsdefinitionen – mit gemeinsamen Freischaltungen für App und Web.",
       "submissionStatus": "published",
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "icon": "app-icons/recht-medizinisch-app-icon-20260909.png",

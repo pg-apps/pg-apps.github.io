@@ -12,7 +12,7 @@ const released = catalog.apps.filter(app => {
   const url = new URL(status.trackViewUrl);
   if (url.protocol !== 'https:' || url.hostname !== 'apps.apple.com') throw new Error('Invalid store link');
   return true;
-}).sort((a, b) => ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch'].indexOf(a.slug) - ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch'].indexOf(b.slug));
+}).sort((a, b) => ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch', 'storyvoyage'].indexOf(a.slug) - ['funkle', 'rynolo', 'nadumo', 'pond-sparks', 'recht-medizinisch', 'storyvoyage'].indexOf(b.slug));
 
 function replaceElement(html, tag, opener, replacement) {
   const start = html.indexOf(opener);

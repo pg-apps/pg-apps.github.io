@@ -14,6 +14,12 @@ if (publicCatalog.schemaVersion !== 1 || !Array.isArray(publicCatalog.apps)) {
   throw new Error("data/public-apps.json has an unsupported format");
 }
 const publicApps = publicCatalog.apps.map((app) => ({ ...app, bundle: app.bundleId }));
+const slugIndex = process.argv.indexOf("--slug");
+const requestedSlug = slugIndex < 0 ? null : process.argv[slugIndex + 1];
+if (slugIndex >= 0 && !publicApps.some((app) => app.slug === requestedSlug)) {
+  throw new Error("--slug must name an existing public app");
+}
+const appsToCheck = requestedSlug ? publicApps.filter((app) => app.slug === requestedSlug) : publicApps;
 const checkedAt = new Date().toISOString();
 
 const lookup = async (bundleId, storefront) => {
@@ -57,13 +63,13 @@ const checkApp = async (app) => {
   return retainConfirmedRecord(previousEntry, app, checkedAt, "lookup_incomplete", failures);
 };
 
-const entries = await Promise.all(publicApps.map(async (app) => [app.slug, await checkApp(app)]));
+const entries = await Promise.all(appsToCheck.map(async (app) => [app.slug, await checkApp(app)]));
 const result = {
   schemaVersion: 1,
   generatedAt: publicApps.length ? checkedAt : (previous.generatedAt ?? checkedAt),
   source: "Apple public App Store catalog",
   storefronts,
-  apps: Object.fromEntries(entries),
+  apps: requestedSlug ? { ...previous.apps, ...Object.fromEntries(entries) } : Object.fromEntries(entries),
 };
 
 if (dryRun) {

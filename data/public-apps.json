@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T08:06:13.142Z",
+  "generatedAt": "2026-11-07T00:02:38.663819Z",
   "apps": [
     {
       "slug": "funkle",
@@ -51,7 +51,16 @@
       "icon": "app-icons/pond-sparks.png",
       "copyright": "2026 Philipp Graef",
       "appleId": 6815104955
+    },
+    {
+      "slug": "storyvoyage",
+      "name": "FoxieVoyage",
+      "summary": "Deine „Der kleine Prinz“-Sammlung auf der Karte: 1.788 Katalogausgaben entdecken, Bücher erfassen und deine persönliche Bücherreise festhalten.",
+      "bundleId": "de.philippgraef.foxievoyage",
+      "icon": "app-icons/storyvoyage.png",
+      "copyright": "2026 Philipp Graef",
+      "appleId": 6808303295
     }
   ],
-  "comingSoonCount": 6
+  "comingSoonCount": 5
 }

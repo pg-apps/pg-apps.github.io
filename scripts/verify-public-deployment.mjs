@@ -35,7 +35,7 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
-const legalOnlySlugs = new Set(["muvamii", "rly", "storyvoyage", "thirty", "road-rivals"]);
+const legalOnlySlugs = new Set(["muvamii", "rly", "thirty", "road-rivals"]);
 // Preserve the newer landing pages maintained by the BOLIQ project. These pages
 // and their existence do not imply a public App Store release.
 const separatelyMaintainedSlugs = new Set(["boliq"]);
@@ -87,7 +87,7 @@ for (const slug of [...legalOnlySlugs, ...separatelyMaintainedSlugs]) {
   if (new RegExp(`(?:apps/${slug}/|data-store-status="${slug}")`).test(home)) throw new Error(`Unreleased identity on homepage: ${slug}`);
 }
 if (!home.includes('<em>Sorgfältig</em> entwickelt.') || !home.includes('<em>Transparent</em> veröffentlicht.')) throw new Error('Two-line claim missing');
-for (const file of ['assets/app-icons/storyvoyage.png','assets/rly-app-icon.png','assets/thirty-app-icon.png']) {
+for (const file of ['assets/rly-app-icon.png','assets/thirty-app-icon.png']) {
   try { await access(path.join(root,file)); } catch { continue; }
   throw new Error('Unreleased portfolio icon exported');
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T08:03:49.966Z",
+  "generatedAt": "2026-11-20T23:20:07.462115+00:00",
   "apps": [
     {
       "slug": "funkle",
@@ -27,11 +27,12 @@
       "bundleId": "com.philippgraef.rynolo",
       "icon": "app-icons/rynolo.png",
       "tagline": "Private travel memories, verified visits and goals that stay honest.",
-      "platform": "iPhone · iOS 18+",
+      "platform": "iPhone · iOS 18+ · Android 8+",
       "submissionStatus": "published",
       "accent": "#087f86",
       "accent2": "#8ce3cd",
-      "appleId": 6807559572
+      "appleId": 6807559572,
+      "androidPackageName": "com.philippgraef.rynolo"
     },
     {
       "slug": "recht-medizinisch",
@@ -41,7 +42,8 @@
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "icon": "app-icons/recht-medizinisch-app-icon-20260909.png",
       "copyright": "2026 Philipp Graef",
-      "appleId": 6809199673
+      "appleId": 6809199673,
+      "androidPackageName": "de.philippgraef.rechtmedizinisch.android"
     },
     {
       "slug": "pond-sparks",

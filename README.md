@@ -11,11 +11,16 @@ repository. Existing legal/support and explicitly maintained landing pages remai
 available independently of launch status.
 
 The local weekly maintenance task reconciles project changes and confirmed App
-Store releases on Mondays at 09:00 Europe/Berlin. It can publish reviewed website
-updates, but cannot release apps or change their prices. The GitHub workflow also
-refreshes the public releases' catalog status. Failed or conflicting lookups keep
-the last confirmed release. No build artifacts are uploaded by this workflow.
+Store and Google Play production releases on Mondays at 09:00 Europe/Berlin. It
+can publish reviewed website updates, but cannot release apps or change prices.
+Google Play records contain only verified production versions and public store
+links, with package and developer checks. Test tracks stay private. Store consoles
+are read-only during maintenance. The GitHub workflow refreshes public Apple
+release metadata while preserving the confirmed Android records and their actual
+check dates. Failed or conflicting lookups keep the last confirmed release. No
+build artifacts are uploaded by this workflow.
 
-Before deployment run `node scripts/test-store-record.mjs` and
+Before deployment run `node scripts/test-store-record.mjs`,
+`node scripts/test-google-play-presentation.mjs` and
 `node scripts/verify-public-deployment.mjs`. Local maintenance additionally checks
 all internal links, legal anchors, anonymous previews and responsive layout.

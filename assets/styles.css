@@ -13,6 +13,7 @@
 }
 
 * { box-sizing: border-box; }
+.store-statuses { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .app-card > a { color: inherit; text-decoration: none; }
 .app-card .card-meta { flex-wrap: wrap; gap: 12px; }
 .app-card .card-meta a { color: var(--accent); }

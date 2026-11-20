@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20T23:20:07.462115+00:00",
+  "source": "Google Play Console production and public Google Play listings",
+  "apps": {
+    "rynolo": {
+      "packageName": "com.philippgraef.rynolo",
+      "version": "1.0.0",
+      "versionCode": 2,
+      "minimumAndroidVersion": "8.0",
+      "releaseDate": "2026-11-17",
+      "status": "published",
+      "track": "production",
+      "developerName": "Philipp Graef",
+      "checkedAt": "2026-11-20T23:20:07.462115+00:00",
+      "storeUrl": "https://play.google.com/store/apps/details?id=com.philippgraef.rynolo"
+    },
+    "recht-medizinisch": {
+      "packageName": "de.philippgraef.rechtmedizinisch.android",
+      "version": "1.0",
+      "versionCode": 37,
+      "minimumAndroidVersion": "7.0",
+      "releaseDate": "2026-11-15",
+      "status": "published",
+      "track": "production",
+      "developerName": "Philipp Graef",
+      "checkedAt": "2026-11-20T23:20:07.462115+00:00",
+      "storeUrl": "https://play.google.com/store/apps/details?id=de.philippgraef.rechtmedizinisch.android"
+    }
+  }
+}

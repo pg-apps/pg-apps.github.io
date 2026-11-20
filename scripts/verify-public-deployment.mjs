@@ -1,5 +1,6 @@
 import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { confirmedGooglePlayRecord } from "./google-play-record.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const catalog = JSON.parse(await readFile(path.join(root, "data/public-apps.json"), "utf8"));
@@ -7,6 +8,9 @@ const statuses = JSON.parse(await readFile(path.join(root, "data/app-store-statu
 
 if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.apps)) throw new Error("Invalid public app catalog");
 if (statuses.schemaVersion !== 1 || typeof statuses.apps !== "object" || statuses.apps === null) throw new Error("Invalid App Store status file");
+
+const googlePlay = JSON.parse(await readFile(path.join(root, "data/google-play-status.json"), "utf8"));
+if (googlePlay.schemaVersion !== 1 || !googlePlay.apps || Array.isArray(googlePlay.apps)) throw new Error("Invalid Google Play status file");
 
 const slugs = new Set();
 for (const app of catalog.apps) {
@@ -91,6 +95,17 @@ for (const file of ['assets/rly-app-icon.png','assets/thirty-app-icon.png']) {
   try { await access(path.join(root,file)); } catch { continue; }
   throw new Error('Unreleased portfolio icon exported');
 }
+for (const [slug, entry] of Object.entries(googlePlay.apps)) {
+  const app = catalog.apps.find(app => app.slug === slug);
+  if (!app) throw new Error('Google Play status exposes a non-public app');
+  confirmedGooglePlayRecord(app, entry);
+  const detail = await readFile(path.join(root, 'apps', slug, 'index.html'), 'utf8');
+  for (const page of [home, detail]) {
+    if (!page.includes(`data-google-play-link="${slug}"`) || !page.includes(entry.storeUrl.replaceAll('&', '&amp;'))) throw new Error('Confirmed Google Play link missing');
+  }
+  if (!detail.includes(`Android ${entry.minimumAndroidVersion}`) || !detail.includes(`Version ${entry.version}`)) throw new Error('Android release facts missing');
+}
+for (const app of catalog.apps) if (app.androidPackageName && !googlePlay.apps[app.slug]) throw new Error('Android package lacks a confirmed production release');
 if (!home.includes('https://philippgraef.github.io/')) throw new Error('Personal website link missing');
 for (const app of catalog.apps) {
   const released = statuses.apps[app.slug]?.status === "published";

@@ -39,24 +39,29 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 // Owner-authorized legal/support-only page; not an approved public app profile.
-const legalOnlySlugs = new Set(["muvamii", "rly", "thirty", "road-rivals"]);
-// Preserve the newer landing pages maintained by the BOLIQ project. These pages
-// and their existence do not imply a public App Store release.
-const separatelyMaintainedSlugs = new Set(["boliq"]);
+const legalOnlySlugs = new Set(["rly", "thirty", "road-rivals"]);
 const legacyRedirectSlugs = new Set(["orydo"]);
-for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug) && !separatelyMaintainedSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
+for (const slug of emittedSlugs) if (!slugs.has(slug) && !legalOnlySlugs.has(slug) && !legacyRedirectSlugs.has(slug)) throw new Error(`Unexpected hidden app page: ${slug}`);
 const legacyRedirect = await readFile(path.join(root, "apps/orydo/index.html"), "utf8");
 if (!legacyRedirect.includes("../nadumo/") || !legacyRedirect.includes("location.hash")) throw new Error("nadumo legacy redirect must preserve legal anchors");
 for (const slug of legalOnlySlugs) {
   const page = await readFile(path.join(root, "apps", slug, "index.html"), "utf8");
-  for (const anchor of slug === 'muvamii' ? ["support", "datenschutz", "support-en", "privacy"] : ["support", "datenschutz"]) {
+  for (const anchor of ["support", "datenschutz"]) {
     if (!page.includes(`id="${anchor}"`)) throw new Error(`Legal anchor missing: ${slug}/${anchor}`);
   }
   if (/<(?:img|video|script|iframe)\b/i.test(page) || /data-app-page|data-store-status|apps\.apple\.com/i.test(page)) {
     throw new Error(`Legal-only page contains presentation or active content: ${slug}`);
   }
   if (catalog.apps.some((app) => app.slug === slug)) throw new Error(`Legal-only page exposed as app profile: ${slug}`);
-  if (slug !== 'muvamii') continue;
+}
+
+// Keep the published Muvamii release's existing DE/EN legal paths protected.
+{
+  const slug = "muvamii";
+  const page = await readFile(path.join(root, "apps", slug, "index.html"), "utf8");
+  for (const id of ["support", "support-en", "datenschutz", "privacy"]) {
+    if (!page.includes(`id="${id}"`)) throw new Error("Muvamii legal anchor missing");
+  }
   const privacy = await readFile(path.join(root, "apps", slug, "privacy.html"), "utf8");
   if (/<(?:img|video|script|iframe)\b/i.test(privacy) || /data-app-page|data-store-status|apps\.apple\.com/i.test(privacy)) {
     throw new Error(`Legal-only privacy page contains presentation or active content: ${slug}`);
@@ -65,7 +70,6 @@ for (const slug of legalOnlySlugs) {
     if (!privacy.includes(`id="${anchor}"`)) throw new Error(`Privacy anchor missing: ${slug}/${anchor}`);
     if (!page.includes(`href="privacy.html#${anchor}"`)) throw new Error(`Privacy link missing: ${slug}/${anchor}`);
   }
-
 }
 
 for (const app of catalog.apps) {
@@ -87,7 +91,7 @@ for (const slug of Object.keys(statuses.apps)) if (!slugs.has(slug)) throw new E
 
 const home = await readFile(path.join(root, "index.html"), "utf8");
 if (!Number.isInteger(catalog.comingSoonCount) || (home.match(/class="app-card is-coming-soon"/g) ?? []).length !== catalog.comingSoonCount) throw new Error('Anonymous preview count mismatch');
-for (const slug of [...legalOnlySlugs, ...separatelyMaintainedSlugs]) {
+for (const slug of legalOnlySlugs) {
   if (new RegExp(`(?:apps/${slug}/|data-store-status="${slug}")`).test(home)) throw new Error(`Unreleased identity on homepage: ${slug}`);
 }
 if (!home.includes('<em>Sorgfältig</em> entwickelt.') || !home.includes('<em>Transparent</em> veröffentlicht.')) throw new Error('Two-line claim missing');
@@ -141,7 +145,7 @@ for (const app of catalog.apps) {
   for (const href of hrefs) {
     if (!href || href.startsWith("#") || /^[A-Za-z][A-Za-z0-9+.-]*:/.test(href)) continue;
     const relativeTarget = href.split(/[?#]/)[0];
-    const resolvedTarget = path.resolve(path.dirname(appPagePath), relativeTarget);
+    const resolvedTarget = relativeTarget.startsWith("/") ? path.resolve(root, relativeTarget.slice(1)) : path.resolve(path.dirname(appPagePath), relativeTarget);
     if (resolvedTarget !== root && !resolvedTarget.startsWith(`${root}${path.sep}`)) {
       throw new Error(`Local link escapes the public root for ${app.slug}: ${href}`);
     }

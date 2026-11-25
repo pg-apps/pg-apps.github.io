@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T15:32:56.929Z",
+  "generatedAt": "2026-11-25T18:33:22.391Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,7 +10,7 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
@@ -24,7 +24,7 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6807579632,
       "trackName": "nadumo",
@@ -38,7 +38,7 @@
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
@@ -52,7 +52,7 @@
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6809199673,
       "trackName": "Recht Medizinisch",
@@ -66,7 +66,7 @@
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6815104955,
       "trackName": "Pond Sparks",
@@ -80,7 +80,7 @@
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "published",
-      "checkedAt": "2026-11-25T15:32:56.929Z",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
       "storefront": "de",
       "trackId": 6808303295,
       "trackName": "FoxieVoyage",
@@ -90,6 +90,34 @@
       "version": "1.0",
       "minimumOsVersion": "18.0",
       "releaseDate": "2026-11-06T23:25:34Z"
+    },
+    "boliq": {
+      "bundleId": "io.github.pg-apps.boliq",
+      "status": "published",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
+      "storefront": "de",
+      "trackId": 6816602324,
+      "trackName": "BOLIQ",
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
+      "trackViewUrl": "https://apps.apple.com/de/app/boliq/id6816602324?uo=4",
+      "version": "1.0",
+      "minimumOsVersion": "18.0",
+      "releaseDate": "2026-11-22T19:14:55Z"
+    },
+    "muvamii": {
+      "bundleId": "local.integration.motionpose.combinedhost",
+      "status": "published",
+      "checkedAt": "2026-11-25T18:33:22.391Z",
+      "storefront": "de",
+      "trackId": 6824460361,
+      "trackName": "Muvamii",
+      "sellerName": "Philipp Graef",
+      "artistId": 6807551307,
+      "trackViewUrl": "https://apps.apple.com/de/app/muvamii/id6824460361?uo=4",
+      "version": "0.1.0",
+      "minimumOsVersion": "18.0",
+      "releaseDate": "2026-11-22T16:35:23Z"
     }
   }
 }

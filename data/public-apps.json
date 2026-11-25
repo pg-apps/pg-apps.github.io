@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T23:20:07.462115+00:00",
+  "generatedAt": "2026-11-25T18:32:49.155752+00:00",
   "apps": [
     {
       "slug": "funkle",
@@ -52,7 +52,8 @@
       "bundleId": "com.teichfunken.pond",
       "icon": "app-icons/pond-sparks.png",
       "copyright": "2026 Philipp Graef",
-      "appleId": 6815104955
+      "appleId": 6815104955,
+      "androidPackageName": "com.teichfunken.pond"
     },
     {
       "slug": "storyvoyage",
@@ -62,7 +63,24 @@
       "icon": "app-icons/storyvoyage.png",
       "copyright": "2026 Philipp Graef",
       "appleId": 6808303295
+    },
+    {
+      "slug": "boliq",
+      "name": "BOLIQ",
+      "summary": "Ein virtueller Pass verbindet euch: Solo üben, mit Freunden vor Ort spielen und mit gegenseitiger Zustimmung ins Gespräch kommen.",
+      "bundleId": "io.github.pg-apps.boliq",
+      "appleId": 6816602324,
+      "icon": "app-icons/boliq.png"
+    },
+    {
+      "slug": "muvamii",
+      "name": "Muvamii",
+      "summary": "Bewegungen nachzeichnen, Posen aus dem Gedächtnis nachmachen und mit 20 Aufgaben einen gemeinsamen Spieleabend gestalten.",
+      "bundleId": "local.integration.motionpose.combinedhost",
+      "appleId": 6824460361,
+      "icon": "app-icons/muvamii.jpg",
+      "androidPackageName": "io.github.pgapps.muvamii"
     }
   ],
-  "comingSoonCount": 5
+  "comingSoonCount": 3
 }

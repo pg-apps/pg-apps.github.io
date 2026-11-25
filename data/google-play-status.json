@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T23:20:07.462115+00:00",
+  "generatedAt": "2026-11-25T18:34:51.073921+00:00",
   "source": "Google Play Console production and public Google Play listings",
   "apps": {
     "rynolo": {
@@ -12,7 +12,7 @@
       "status": "published",
       "track": "production",
       "developerName": "Philipp Graef",
-      "checkedAt": "2026-11-20T23:20:07.462115+00:00",
+      "checkedAt": "2026-11-25T18:34:51.073921+00:00",
       "storeUrl": "https://play.google.com/store/apps/details?id=com.philippgraef.rynolo"
     },
     "recht-medizinisch": {
@@ -24,8 +24,32 @@
       "status": "published",
       "track": "production",
       "developerName": "Philipp Graef",
-      "checkedAt": "2026-11-20T23:20:07.462115+00:00",
+      "checkedAt": "2026-11-25T18:34:51.073921+00:00",
       "storeUrl": "https://play.google.com/store/apps/details?id=de.philippgraef.rechtmedizinisch.android"
+    },
+    "pond-sparks": {
+      "status": "published",
+      "track": "production",
+      "developerName": "Philipp Graef",
+      "packageName": "com.teichfunken.pond",
+      "version": "1.1.0",
+      "versionCode": 13,
+      "minimumAndroidVersion": "8.0",
+      "releaseDate": "2026-11-23",
+      "checkedAt": "2026-11-25T18:34:51.073921+00:00",
+      "storeUrl": "https://play.google.com/store/apps/details?id=com.teichfunken.pond"
+    },
+    "muvamii": {
+      "status": "published",
+      "track": "production",
+      "developerName": "Philipp Graef",
+      "packageName": "io.github.pgapps.muvamii",
+      "version": "1.0.0",
+      "versionCode": 15,
+      "minimumAndroidVersion": "8.0",
+      "releaseDate": "2026-11-24",
+      "checkedAt": "2026-11-25T18:34:51.073921+00:00",
+      "storeUrl": "https://play.google.com/store/apps/details?id=io.github.pgapps.muvamii"
     }
   }
 }

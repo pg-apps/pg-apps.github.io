@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T15:07:54.186Z",
+  "generatedAt": "2026-11-27T15:00:05.672Z",
   "source": "Apple public App Store catalog",
   "storefronts": [
     "de",
@@ -10,7 +10,7 @@
     "funkle": {
       "bundleId": "io.github.pg-apps.funkle",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6807551305,
       "trackName": "Funkle",
@@ -24,7 +24,7 @@
     "nadumo": {
       "bundleId": "com.pgapps.orydo",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6807579632,
       "trackName": "nadumo",
@@ -38,7 +38,7 @@
     "rynolo": {
       "bundleId": "com.philippgraef.rynolo",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6807559572,
       "trackName": "RYNOLO",
@@ -52,7 +52,7 @@
     "recht-medizinisch": {
       "bundleId": "de.philippgraef.RechtMedizinisch",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6809199673,
       "trackName": "Recht Medizinisch",
@@ -66,7 +66,7 @@
     "pond-sparks": {
       "bundleId": "com.teichfunken.pond",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6815104955,
       "trackName": "Pond Sparks",
@@ -80,7 +80,7 @@
     "storyvoyage": {
       "bundleId": "de.philippgraef.foxievoyage",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6808303295,
       "trackName": "FoxieVoyage",
@@ -94,7 +94,7 @@
     "boliq": {
       "bundleId": "io.github.pg-apps.boliq",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6816602324,
       "trackName": "BOLIQ",
@@ -108,7 +108,7 @@
     "muvamii": {
       "bundleId": "local.integration.motionpose.combinedhost",
       "status": "published",
-      "checkedAt": "2026-11-26T15:07:54.186Z",
+      "checkedAt": "2026-11-27T15:00:05.672Z",
       "storefront": "de",
       "trackId": 6824460361,
       "trackName": "Muvamii",
